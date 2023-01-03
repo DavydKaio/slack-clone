@@ -1,11 +1,17 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="app">
-      <h1>Lets build Slack</h1>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Header />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
