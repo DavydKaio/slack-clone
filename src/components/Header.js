@@ -8,19 +8,16 @@ import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 function Header() {
   return (
     <HeaderContainer>
-      {/* Header Left */}
       <HeaderLeft>
         <HeaderAvatar />
         <AccessTimeIcon />
       </HeaderLeft>
 
-      {/* Header Search */}
       <HeaderSearch>
         <SearchIcon />
         <input placeholder="Search" />
       </HeaderSearch>
 
-      {/* Header Right */}
       <HeaderRight>
         <HelpOutlineIcon />
       </HeaderRight>
