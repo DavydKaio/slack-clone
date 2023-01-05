@@ -13,10 +13,13 @@ import InboxIcon from "@mui/icons-material/Inbox";
 import InsertCommentIcon from "@mui/icons-material/InsertComment";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import AddIcon from "@mui/icons-material/Add";
-import { db } from "../firebase";
+import { auth, db } from "../firebase";
 import { useCollection } from "react-firebase-hooks/firestore";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 function Sidebar() {
+  const [user] = useAuthState(auth);
+
   const [channels] = useCollection(db.collection("rooms"));
 
   return (
@@ -26,7 +29,7 @@ function Sidebar() {
           <h2>DK LAB</h2>
           <h3>
             <FiberManualRecordIcon />
-            Davyd Simões
+            {user.displayName}
           </h3>
         </SidebarInfo>
         <CreateIcon />
