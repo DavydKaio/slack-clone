@@ -17,9 +17,8 @@ import { db } from "../firebase";
 import { useCollection } from "react-firebase-hooks/firestore";
 
 function Sidebar() {
-  const [channels, loading, error] = useCollection(db.collection("rooms"));
+  const [channels] = useCollection(db.collection("rooms"));
 
-  console.log(channels);
   return (
     <SidebarContainer>
       <SidebarHeader>

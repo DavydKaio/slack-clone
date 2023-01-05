@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 import "./App.css";
+import Chat from "./components/Chat";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 
@@ -12,7 +13,7 @@ function App() {
       <AppBody>
         <Sidebar />
         <Routes>
-          <Route path="/" element={null} />
+          <Route path="/" element={<Chat />} />
         </Routes>
       </AppBody>
     </BrowserRouter>
